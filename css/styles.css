@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+body {
+  transition: 0.3s;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(244, 241, 241);
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 300;
+  color: rgb(57, 57, 57);
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+  margin: 50px 0 10px 0;
+}
+
+p {
+  margin: 0px;
+  font-size: 20px;
+}
+
+a {
+  color: rgb(162, 0, 255);
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.dark a {
+  color: rgb(246, 169, 241);
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  /* Merge pe Linie, Pe Coloana merge align-items */
+  padding: 30px;
+}
+
+.switch {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(39, 38, 38);
+  position: relative;
+}
+
+.flicker {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: 0.3s;
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgb(195 193 198 / 90%);
+}
+
+
+.dark {
+  background-color: rgb(57, 57, 57);
+  transition: 0.3s;
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+  position: absolute;
+  top: 5px;
+  left: 45px;
+}
+
+.dark .flicker {
+  transform: translateX(40px);
+}
+
+.dark>* {
+  color: rgb(255, 255, 255);
+}
+
+.dark h1 {
+  color: rgb(255, 255, 255);
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.main-text {
+  padding: 30px;
+  margin-bottom: 100px;
+}
+
+.main-text h1 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.square {
+  width: 98%;
+  margin: 1%;
+  height: 350px;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.tesla__msg,
+.oshop__msg,
+.games__msg,
+.pizza__msg {
+  position: absolute;
+  display: none;
+  color: yellow;
+  font-size: 40px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.show__msg {
+  top: 30%;
+  display: flex;
+  animation-name: msgAnimation;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes msgAnimation {
+  from {
+    top: 10%;
+  }
+
+  to {
+    top: 30%;
+  }
+}
+
+.dark .square {
+  background-color: rgb(71, 71, 71);
+}
+
+.background-sub-section1 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(57, 57, 57);
+  opacity: 0.6;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.background-sub-section2 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(57, 57, 57);
+  opacity: 0.6;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.background-sub-section3 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(57, 57, 57);
+  opacity: 0.6;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.background-sub-section4 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(57, 57, 57);
+  opacity: 0.6;
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.shadow {
+  display: flex;
+}
+
+
+#tesla {
+  background-image: url('../images/tesla.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#oshop {
+  background-image: url('../images/Oshop.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#games {
+  background-image: url('../images/gamesOrban.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#pizza {
+  background-image: url('../images/Miapizza.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+
+.sub-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.hero-image {
+  position: relative;
+  width: 50%;
+  height: 350px;
+  margin-bottom: 100px;
+}
+
+.cube {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  transform: rotate(-25deg) skew(25deg);
+}
+
+.cube:before {
+  position: absolute;
+  content: '';
+  width: 21px;
+  height: 100%;
+  transform: skewY(-45deg);
+  left: -20px;
+  bottom: -10px;
+}
+
+.cube:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 21px;
+  transform: skewX(-45deg);
+  left: -10px;
+  bottom: -20px;
+}
+
+#html {
+  left: 100px;
+  bottom: 80px;
+  background-image: url('../images/html-square.png');
+  background-size: cover;
+  background-color: rgb(175, 119, 227);
+  box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
+  transition: 0.8s;
+}
+
+#html:before {
+  background-color: rgb(189, 154, 221);
+}
+
+#html:after {
+  background-color: rgb(189, 154, 221);
+}
+
+#html:hover {
+  bottom: 60px;
+  transition: 0.8s;
+}
+
+#css {
+  left: 250px;
+  bottom: 240px;
+  background-image: url('../images/css-square.png');
+  background-size: cover;
+  background-color: rgb(277, 119, 191);
+  box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+  transition: 0.8s;
+}
+
+#css:before {
+  background-color: rgb(291, 154, 207);
+}
+
+#css:after {
+  background-color: rgb(221, 188, 211);
+}
+
+#css:hover {
+  bottom: 200px;
+  transition: 0.8s;
+}
+
+#javascript {
+  left: 450px;
+  bottom: 160px;
+  background-image: url('../images/javascript-square.png');
+  background-size: cover;
+  background-color: rgb(119, 227, 186);
+  box-shadow: -40px 40px 20px rgb(50 50 50/ 15%);
+  transition: 0.8s;
+}
+
+#javascript:before {
+  background-color: rgb(154, 221, 202);
+}
+
+#javascript:after {
+  background-color: rgb(188, 221, 212);
+}
+
+#javascript:hover {
+  bottom: 120px;
+  transition: 0.8s;
+}
+
+#react {
+  left: 300px;
+  bottom: 10px;
+  background-image: url('../images/react-square.png');
+  background-size: cover;
+  background-color: rgb(119, 193, 227);
+  box-shadow: -40px 40px 20px rgb(50 50 50/ 15%);
+  transition: 0.8s;
+}
+
+#react:before {
+  background-color: rgb(154, 189, 221);
+}
+
+#react:after {
+  background-color: rgb(188, 200, 221);
+}
+
+#react:hover {
+  bottom: 70px;
+  transition: 0.8s;
+}
+
+
+.skills__section1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 50px 0;
+}
+
+.skills__list1 {
+  width: 65%;
+}
+
+.skills__data {
+  padding: 0 150px 0 150px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.percentage__value__html {
+  width: 85%;
+  margin-bottom: 25px;
+}
+
+.percentage__value__html span {
+  float: right;
+}
+
+.percentage__value__CSS {
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.percentage__value__CSS span {
+  float: right;
+}
+
+.percentage__value__Javascript {
+  width: 70%;
+  margin-bottom: 25px;
+}
+
+.percentage__value__Javascript span {
+  float: right;
+}
+
+.percentage__value__React {
+  width: 65%;
+  margin-bottom: 25px;
+}
+
+.percentage__value__React span {
+  float: right;
+}
+
+.span__90,
+.span__80,
+.span__70,
+.span__75,
+.span__65,
+.span__60,
+.span__35 {
+  display: none;
+  font-weight: 600;
+}
+
+.show {
+  display: flex;
+  animation-name: myAnimation;
+  animation-duration: 6s;
+}
+
+@keyframes myAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.skills__bar {
+  height: 10px;
+  width: 100%;
+  background-color: #363945;
+}
+
+.skills__percentage__html {
+  display: block;
+  height: 10px;
+  width: 0%;
+  background-color: #0072B5;
+  transition: width 3s;
+}
+
+
+.skills__percentage__CSS {
+  display: block;
+  height: 10px;
+  width: 0%;
+  background-color: #0072B5;
+  transition: width 3s;
+}
+
+.skills__percentage__Javascript {
+  display: block;
+  height: 10px;
+  width: 0%;
+  background-color: #0072B5;
+  transition: width 3s;
+}
+
+.skills__percentage__React {
+  display: block;
+  height: 10px;
+  width: 0%;
+  background-color: #0072B5;
+  transition: width 3s;
+}
+
+.skills__section2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 50px 0;
+}
+
+.skills__list2 {
+  width: 65%;
+}
+
+.percentage__value__blender {
+  width: 75%;
+  margin-bottom: 25px;
+}
+
+.percentage__value__blender span {
+  float: right;
+}
+
+.percentage__value__painter {
+  width: 40%;
+  margin-bottom: 25px;
+}
+
+.percentage__value__painter span {
+  float: right;
+}
+
+.percentage__value__lowpoly {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.percentage__value__lowpoly span {
+  float: right;
+}
+
+.skills__percentage__blender {
+  display: block;
+  height: 10px;
+  width: 0%;
+  background-color: #0072B5;
+  transition: width 3s;
+}
+
+.skills__percentage__painter {
+  display: block;
+  height: 10px;
+  width: 0%;
+  background-color: #0072B5;
+  transition: width 3s;
+}
+
+.skills__percentage__lowpoly {
+  display: block;
+  height: 10px;
+  width: 0%;
+  background-color: #0072B5;
+  transition: width 3s;
+}
+
+.follow__me {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.follow__me__title {
+  margin-bottom: 80px;
+}
+
+.follow__me__title h1 {
+  margin: 20px 0 20px 0;
+}
+
+.follow__me__content {
+  display: flex;
+  width: 100%;
+}
+
+.follow__me__list {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  margin-right: 45px;
+}
+
+.follow__me__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.follow__me__item a {
+  color: rgb(78, 78, 255);
+}
+
+.line__section {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  height: 2px;
+  width: 75%;
+  background-color: darkblue;
+  box-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 3px darkblue;
+}
+
+.dark .line__section {
+  background-color: rgb(39, 38, 38);
+  box-shadow: 1px 1px 2px #0072B5, 0 0 15px #0072B5, 0 0 3px #0072B5;
+}
+
+
+.footer__title {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.footer {
+  width: 99%;
+  margin: 1%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email {
+  border: 1px solid #363945;
+  border-radius: 5px;
+  width: 250px;
+  height: 25px;
+  margin-bottom: 15px;
+}
+
+.message {
+  resize: none;
+  width: 350px;
+  height: 150px;
+  margin: 10px 0 10px 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 30px;
+  line-height: 30px;
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  background-color: #363945;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #0072B5;
+  color: #03324c;
+}
+
+.dark .button {
+  background-color: #0072B5;
+}
+
+@media only screen and (min-width: 970px) {
+
+  .main-text {
+    width: 50%;
+  }
+
+  .square {
+    width: 48%;
+    margin: 1%;
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .follow__me__list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+  }
+
+  .follow__me__item {
+    margin: 10px 0 10px 0;
+  }
+}
+
+
+@media only screen and (max-width: 1300px) {
+
+  .tesla__msg,
+  .oshop__msg,
+  .games__msg,
+  .pizza__msg {
+    font-size: 20px;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .skills__list1 {
+    width: 99%;
+    margin: 1%;
+  }
+
+  .skills__data {
+    padding: 0 20px 0 20px;
+  }
+
+  .skills__list2 {
+    width: 99%;
+    margin: 1%;
+  }
+
+  .footer__title {
+    margin-top: 50px;
+    margin-bottom: -130px;
+  }
+
+  .footer {
+    height: 70vh;
+  }
+}
