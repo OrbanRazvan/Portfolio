@@ -440,6 +440,15 @@ a {
   float: right;
 }
 
+.percentage__value__Java {
+  width: 55%;
+  margin-bottom: 25px;
+}
+
+.percentage__value__Java span {
+  float: right;
+}
+
 .span__90,
 .span__80,
 .span__70,
@@ -499,6 +508,14 @@ a {
 }
 
 .skills__percentage__React {
+  display: block;
+  height: 10px;
+  width: 0%;
+  background-color: #0072B5;
+  transition: width 3s;
+}
+
+.skills__percentage__Java {
   display: block;
   height: 10px;
   width: 0%;
