@@ -23,6 +23,7 @@ const skills_html = document.querySelector('.skills__percentage__html');
 const skills_css = document.querySelector('.skills__percentage__CSS');
 const skills_javascript = document.querySelector('.skills__percentage__Javascript');
 const skills_react = document.querySelector('.skills__percentage__React');
+const skills_java = document.querySelector('.skills__percentage__Java');
 
 const skills_blender = document.querySelector('.skills__percentage__blender');
 const skills_painter = document.querySelector('.skills__percentage__painter');
@@ -34,6 +35,7 @@ const Span_75 = document.querySelector('.span__75');
 const Span_70 = document.querySelector('.span__70');
 const Span_65 = document.querySelector('.span__65');
 const Span_60 = document.querySelector('.span__60');
+const Span_55 = document.querySelector('.span__55');
 const Span_35 = document.querySelector('.span__35');
 
 switchElement.addEventListener('click', () => {
@@ -94,16 +96,19 @@ SkillsList1.addEventListener('mouseenter', () => {
   skills_css.style.width = "75%";
   skills_javascript.style.width = "65%";
   skills_react.style.width = "60%";
+  skills_java.style.width = "55%";
 
   Span_80.textContent = "80%";
   Span_75.textContent = "75%";
   Span_65.textContent = "65%";
   Span_60.textContent = "60%";
+  Span_55.textContent = "55%";
 
   Span_80.classList.add('show');
   Span_75.classList.add('show');
   Span_65.classList.add('show');
   Span_60.classList.add('show');
+  Span_55.classList.add('show');
 
 })
 
